@@ -4,6 +4,7 @@ const app: Express = express()
 const port: number = 3000
 
 
+
 app.get("/", (req: Request, res: Response) => {
     res.send("Hello from TS-Express application – I am up and Kukkuuu!!")
 })
@@ -15,6 +16,8 @@ app.listen(port, () => {
 app.get("/hello", (req: Request, res: Response) => {
     res.send("Hello world")
 })
+
+//app.post()
 
 interface Vehicle {
     model: string;
@@ -35,3 +38,4 @@ const vehicleHandler = (req: Request, res: Response) => {
     res.status(201).send("Vehicle added");
 
 };
+

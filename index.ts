@@ -17,7 +17,7 @@ app.get("/hello", (req: Request, res: Response) => {
     res.send("Hello world")
 })
 
-//app.post()
+
 
 interface Vehicle {
     model: string;
@@ -28,7 +28,7 @@ interface Vehicle {
 
 let vehicles: Vehicle[] = [];
 
-const vehicleHandler = (req: Request, res: Response) => {
+const addVehicle = (req: Request, res: Response) => {
     const {model, color, year, power} = req.body;
 
     const vehicle: Vehicle = { model, color, year, power};
@@ -39,3 +39,6 @@ const vehicleHandler = (req: Request, res: Response) => {
 
 };
 
+app.post("/vehicle/add", addVehicle);
+//jokohan toimis
+//kukkuuu

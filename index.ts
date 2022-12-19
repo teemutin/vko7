@@ -15,3 +15,23 @@ app.listen(port, () => {
 app.get("/hello", (req: Request, res: Response) => {
     res.send("Hello world")
 })
+
+interface Vehicle {
+    model: string;
+    color: string;
+    year: number;
+    power: number;
+}
+
+let vehicles: Vehicle[] = [];
+
+const vehicleHandler = (req: Request, res: Response) => {
+    const {model, color, year, power} = req.body;
+
+    const vehicle: Vehicle = { model, color, year, power};
+
+    vehicles.push(vehicle);
+
+    res.status(201).send("Vehicle added");
+
+};

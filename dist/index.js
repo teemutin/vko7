@@ -15,3 +15,10 @@ app.listen(port, () => {
 app.get("/hello", (req, res) => {
     res.send("Hello world");
 });
+let vehicles = [];
+const vehicleHandler = (req, res) => {
+    const { model, color, year, power } = req.body;
+    const vehicle = { model, color, year, power };
+    vehicles.push(vehicle);
+    res.status(201).send("Vehicle added");
+};

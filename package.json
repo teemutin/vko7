@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
     "dev-server": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"nodemon ./dist/index.js\""
   },
   "author": "",
